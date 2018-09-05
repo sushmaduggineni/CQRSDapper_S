@@ -1,0 +1,16 @@
+﻿using CQRSWithDapper.Commands.Contracts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CQRSWithDapper.Commands
+{
+    public class BaseCommand : ICommand
+    {
+        public Guid Id { get; set; }
+
+        public int ExpectedVersion { get; set; }
+    }
+}
